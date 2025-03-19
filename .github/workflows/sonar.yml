@@ -43,4 +43,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn clean verify jacoco:report org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
           -Dsonar.projectKey=juanhcode_test-users-micro \
-          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml \
+          -Dsonar.branch.name=main
