@@ -20,14 +20,6 @@ class UsersMicroserviceApplicationTests {
 
 	@Test
 	void deleteUser() {
-		Role role = new Role(1L, "ROLE_USER");
-
-		User user = new User(1L, "juan", "hoyos", "hoyos@gmail.com", role, "cra34",true );
-		User user2 = new User(2L, "Diana", "hoyos", "hoyos@gmail.com", role, "cra34",true );
-
-		List<User> users = List.of(user, user2);
-		userRepository.deleteById(user.getId());
-		System.out.println(user);
 	}
 
 }
