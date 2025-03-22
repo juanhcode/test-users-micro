@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: users-microservice
-          image: juanhoyos/test-users
+          image: juanhoyos/test-users:latest
           ports:
             - containerPort: 8081
           env:
