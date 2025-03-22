@@ -7,7 +7,7 @@ on:
       - develop
 
 env:
-  IMAGE_NAME: juanhoyos/test-users  # Reemplaza con tu usuario de Docker Hub
+  IMAGE_NAME: juanhoyos/test-users:latest  # Reemplaza con tu usuario de Docker Hub
   REGISTRY: docker.io
 
 jobs:
