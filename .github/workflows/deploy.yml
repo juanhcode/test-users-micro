@@ -7,7 +7,7 @@ on:
       - develop
 
 env:
-  IMAGE_NAME: juanhoyos/test-users:latest  # Reemplaza con tu usuario de Docker Hub
+  IMAGE_NAME: juanhoyos/test-users  # Reemplaza con tu usuario de Docker Hub
   REGISTRY: docker.io
 
 jobs:
@@ -36,13 +36,8 @@ jobs:
       - name: Construir y etiquetar imagen
         run: |
           TAG=$(echo $GITHUB_SHA | cut -c1-7)
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            docker build -t $IMAGE_NAME:prod-$TAG .
-            docker push $IMAGE_NAME:prod-$TAG
-          elif [[ "${{ github.ref }}" == "refs/heads/develop" ]]; then
-            docker build -t $IMAGE_NAME:dev-$TAG .
-            docker push $IMAGE_NAME:dev-$TAG
-          fi
+          docker build -t $IMAGE_NAME:latest .
+          docker push $IMAGE_NAME:latest
 
       - name: Actualizar manifiestos de Kubernetes
         run: |
