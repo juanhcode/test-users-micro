@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - main
-      - develop
 
 env:
-  IMAGE_NAME: juanhoyos/test-users1  # Reemplaza con tu usuario de Docker Hub
+  IMAGE_NAME: juanhoyos/test-users2  # Reemplaza con tu usuario de Docker Hub
   REGISTRY: docker.io
 
 jobs:
